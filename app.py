@@ -1,5 +1,9 @@
+import pandas as pd
 import streamlit as st
 import joblib
+import sklearn
+
+st.write("scikit-learn version:", sklearn.__version__)
 
 st.set_page_config(page_title="House Price Prediction")
 
@@ -20,9 +24,23 @@ property_type = st.selectbox(
     ["Apartment", "Villa", "Independent House", "Studio"]
 )
 
-if st.button("Predict Price"):
-    st.success("Prediction button clicked!")
-
 model = joblib.load("house_price_model.pkl")
 
 st.success("✅ Model Loaded Successfully")
+
+if st.button("Predict Price"):
+
+    input_data = pd.DataFrame({
+        "bhk": [bhk],
+        "bathrooms": [bathrooms],
+        "built_up_area": [area],
+        "city": [city],
+        "property_type": [property_type]
+    })
+
+    st.write(input_data)
+    st.write(input_data.dtypes)
+
+    prediction = model.predict(input_data)
+
+    st.success(f"🏠 Predicted Price: ₹ {prediction[0]:.2f} Lakhs")
