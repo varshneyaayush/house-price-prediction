@@ -1,0 +1,31 @@
+column_name,data_type,description
+property_id,string,Unique identifier for each property (format: PROP-XXXXXX)
+city,string,City where the property is located (Bangalore / Mumbai / Delhi / Hyderabad)
+locality,string,Specific locality / neighbourhood of the property (20 localities)
+locality_tier,string,Tier classification of the locality (Premium / Standard / Affordable)
+property_type,string,Type of property (Apartment / Villa / Independent House / Studio / Penthouse / Row House)
+bhk,integer,"Number of Bedrooms, Hall, and Kitchen units (1–5)"
+bathrooms,integer,Number of bathrooms (1–6)
+balconies,integer,Number of balconies (0–4)
+built_up_area,integer,"Total built-up area including walls and common spaces (sq ft, 300–8000)"
+carpet_area,integer,"Usable carpet/floor area excluding walls (sq ft, approx 80–88% of built-up area)"
+floor_number,integer,Floor number on which the property is located (0 = Ground)
+total_floors,integer,Total number of floors in the building
+floor_category,string,Categorical floor level (Ground / Low (1-4) / Mid (5-9) / High (10-19) / Top (20+))
+facing,string,Direction the main entrance faces (N / S / E / W / NE / NW / SE / SW)
+furnishing_status,string,Furnishing level of the property (Unfurnished / Semi-Furnished / Fully Furnished)
+property_age,integer,"Age of the property in years (0 = newly constructed, max 40)"
+parking_spaces,integer,Number of dedicated parking spaces (0–5)
+security_score,float,Security facility score on a 0–10 scale
+gym_available,integer,"Whether a gym/fitness centre is available (1 = Yes, 0 = No)"
+swimming_pool,integer,"Whether a swimming pool is available (1 = Yes, 0 = No)"
+power_backup,integer,"Whether full power backup is available (1 = Yes, 0 = No)"
+lift_available,integer,"Whether a lift/elevator is available (1 = Yes, 0 = No)"
+maintenance_fee_monthly,integer,"Monthly maintenance fee in INR (500–25,000)"
+distance_to_city_center_km,float,Distance to nearest city/business centre in km (0.5–45.0)
+distance_to_metro_km,float,Distance to nearest metro/subway station in km (0.1–15.0)
+nearby_schools,integer,Number of schools within a 2 km radius (0–10)
+nearby_hospitals,integer,Number of hospitals within a 3 km radius (0–8)
+transaction_type,string,Whether this is a New or Resale transaction
+price_in_lakhs,float,Actual property price in Indian Rupees Lakhs (10–1000 Lakhs)
+price_category,string,Target variable — price tier of the property (High / Low) based on top 35th percentile

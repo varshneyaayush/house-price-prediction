@@ -1,0 +1,29 @@
+{
+  "dataset_name": "Housing Price Prediction Dataset",
+  "total_records": 50000,
+  "total_features": 29,
+  "target_variable": "price_category",
+  "regression_target": "price_in_lakhs",
+  "class_distribution": {
+    "High": 17500,
+    "Low": 32500,
+    "High_percentage": 35.0,
+    "Low_percentage": 65.0
+  },
+  "train_size": 35000,
+  "validation_size": 7500,
+  "test_size": 7500,
+  "generation_date": "2026-06-12",
+  "dataset_version": "1.0.0",
+  "random_seed": 42,
+  "intended_use_cases": [
+    "House Price Regression",
+    "Price Category Classification",
+    "Real Estate Analytics",
+    "Feature Importance & Explainability",
+    "Geospatial Price Analysis",
+    "Investment Decision Support",
+    "Amenity Value Estimation",
+    "Feature Engineering Practice"
+  ]
+}
